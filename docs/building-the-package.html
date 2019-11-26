@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Documentation | R for Research Scientists</title>
+  <title>4.2 Building the package | R for Research Scientists</title>
   <meta name="description" content="A book for researchers who contribute code to R projects, but are not package administrators." />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Documentation | R for Research Scientists" />
+  <meta property="og:title" content="4.2 Building the package | R for Research Scientists" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="brewer36/r-for-research-scientists" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Documentation | R for Research Scientists" />
+  <meta name="twitter:title" content="4.2 Building the package | R for Research Scientists" />
   
   <meta name="twitter:description" content="A book for researchers who contribute code to R projects, but are not package administrators." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="test.html"/>
-<link rel="next" href="pack.html"/>
+<link rel="prev" href="install-development-tools.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -179,17 +179,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="doc" class="section level1">
-<h1 number="3"><span class="header-section-number">3</span> Documentation</h1>
+<div id="building-the-package" class="section level2">
+<h2 number="4.2"><span class="header-section-number">4.2</span> Building the package</h2>
+<div id="when" class="section level3">
+<h3 number="4.2.1"><span class="header-section-number">4.2.1</span> When?</h3>
+<p>You should <em>always</em> clean and build the package (and resolve any errors or warnings) before making a commit.</p>
+</div>
+<div id="clean" class="section level3">
+<h3 number="4.2.2"><span class="header-section-number">4.2.2</span> Clean</h3>
+<p>In the RStudio Toolbar, select “Build” &gt;&gt; “Clean”. This removes unneccesssary files that were created from a previous build.</p>
+</div>
+<div id="build" class="section level3">
+<h3 number="4.2.3"><span class="header-section-number">4.2.3</span> Build</h3>
+<p><code>R CMD check</code> in the terminal, <code>devtools::check()</code> in the console, and Ctrl/Cmd + Shift + E in RStudio all deploy a function that checks your package for common problems and makes sure a package includes everything in needs to play well with others upon distribution.</p>
+<p>Errors and warnings produced by the <code>check()</code> funciton should be resolved before every commit. This workflow comes from the book <strong>R packages</strong> <span class="citation">(Wickham and Bryan <a href="references.html#ref-r-packages" role="doc-biblioref">2019</a>)</span>:</p>
+<ol style="list-style-type: decimal">
+<li>Run the <code>check()</code> function</li>
+<li>Fix the first error or warning</li>
+<li>Repeat steps (1) and (2) until all errors and warnings are resolved.</li>
+</ol>
+<p>Now in order to be able to use the package, use the <code>devtools::install()</code> function or Ctrl/Cmd + Shift + B to load the current version of the package into RStudio.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Run the <code>install()</code> function</li>
+</ol>
 
 </div>
+</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="test.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="pack.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="install-development-tools.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -220,7 +243,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/r-for-research-scientists/edit/master/03-doc.Rmd",
+"link": "https://github.com/rstudio/r-for-research-scientists/edit/master/04-pack.Rmd",
 "text": "Edit"
 },
 "history": {
