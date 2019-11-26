@@ -1,0 +1,35 @@
+--- 
+title: "R for Research Scientists"
+author: "Nicole Brewer"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: brewer36/r-for-research-scientists
+description: "A book for researchers who contribute code to R projects, but are not package administrators."
+---
+
+# Preamble {-}
+
+### Who is this book for? {-}
+There are already many great tutorials out there for building packages in R, but they are generally too comprehensive, and cater to project administrators. This book is intended for researchers who contriubute code to an R project, and leaves out details irrelevant to this audience. If you *are* the administrator for you project or you just want to know more about what's going on behind the hood, each section begins by explaining the **why** of standard practices, and includes resources that explain how to implement them.
+
+### What you won't learn. {-}
+How to program in R.
+
+### What will you learn? {-}
+How to contribute to a well structured project.
+
+### Why this worth your precious time? {-}
+Reading this book will save you from more headaches and time-wasters than you can imagine, especially as your project grows in size and complexity.
+
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

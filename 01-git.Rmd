@@ -1,0 +1,3 @@
+# Git and Github {#git}
+
+The what and why of version control (specific to R!) can be found [here](https://happygitwithr.com/)
