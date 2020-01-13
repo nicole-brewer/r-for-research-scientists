@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Unit Testing | R for Research Scientists</title>
+  <title>3 Unit Testing | R for Research Scientists</title>
   <meta name="description" content="A book for researchers who contribute code to R projects, but are not package administrators." />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Unit Testing | R for Research Scientists" />
+  <meta property="og:title" content="3 Unit Testing | R for Research Scientists" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="brewer36/r-for-research-scientists" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Unit Testing | R for Research Scientists" />
+  <meta name="twitter:title" content="3 Unit Testing | R for Research Scientists" />
   
   <meta name="twitter:description" content="A book for researchers who contribute code to R projects, but are not package administrators." />
   
@@ -24,14 +24,14 @@
 <meta name="author" content="Nicole Brewer" />
 
 
-<meta name="date" content="2019-11-26" />
+<meta name="date" content="2020-01-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="git.html"/>
+<link rel="prev" href="pack.html"/>
 <link rel="next" href="doc.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -139,25 +139,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-will-you-learn"><i class="fa fa-check"></i>What will you learn?</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-this-worth-your-precious-time"><i class="fa fa-check"></i>Why this worth your precious time?</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>1</b> Git and Github</a></li>
-<li class="chapter" data-level="2" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>2</b> Unit Testing</a></li>
-<li class="chapter" data-level="3" data-path="doc.html"><a href="doc.html"><i class="fa fa-check"></i><b>3</b> Documentation</a></li>
-<li class="chapter" data-level="4" data-path="pack.html"><a href="pack.html"><i class="fa fa-check"></i><b>4</b> Packages</a>
+<li class="chapter" data-level="1" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>1</b> Git and Github</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="install-development-tools.html"><a href="install-development-tools.html"><i class="fa fa-check"></i><b>4.1</b> Install Development Tools</a>
+<li class="chapter" data-level="1.1" data-path="git.html"><a href="git.html#git-in-rstudio"><i class="fa fa-check"></i><b>1.1</b> Git in RStudio</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="install-development-tools.html"><a href="install-development-tools.html#mac-xcode"><i class="fa fa-check"></i><b>4.1.1</b> Mac: XCode</a></li>
-<li class="chapter" data-level="4.1.2" data-path="install-development-tools.html"><a href="install-development-tools.html#windows-rtools"><i class="fa fa-check"></i><b>4.1.2</b> Windows: Rtools</a></li>
-<li class="chapter" data-level="4.1.3" data-path="install-development-tools.html"><a href="install-development-tools.html#linux-r-development-tools-package"><i class="fa fa-check"></i><b>4.1.3</b> Linux: R development tools package</a></li>
-<li class="chapter" data-level="4.1.4" data-path="install-development-tools.html"><a href="install-development-tools.html#verify-success"><i class="fa fa-check"></i><b>4.1.4</b> Verify Success</a></li>
+<li class="chapter" data-level="1.1.1" data-path="git.html"><a href="git.html#setting-up-remotes-for-the-first-time"><i class="fa fa-check"></i><b>1.1.1</b> Setting Up Remotes for the First Time</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="building-the-package.html"><a href="building-the-package.html"><i class="fa fa-check"></i><b>4.2</b> Building the package</a>
+<li class="chapter" data-level="1.2" data-path="git.html"><a href="git.html#git-workflow-from-a-fork"><i class="fa fa-check"></i><b>1.2</b> Git Workflow from a Fork</a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="building-the-package.html"><a href="building-the-package.html#when"><i class="fa fa-check"></i><b>4.2.1</b> When?</a></li>
-<li class="chapter" data-level="4.2.2" data-path="building-the-package.html"><a href="building-the-package.html#clean"><i class="fa fa-check"></i><b>4.2.2</b> Clean</a></li>
-<li class="chapter" data-level="4.2.3" data-path="building-the-package.html"><a href="building-the-package.html#build"><i class="fa fa-check"></i><b>4.2.3</b> Build</a></li>
+<li class="chapter" data-level="1.2.1" data-path="git.html"><a href="git.html#merge-upstream-changes-into-your-own-master-branch"><i class="fa fa-check"></i><b>1.2.1</b> Merge upstream changes into your own master branch</a></li>
+<li class="chapter" data-level="1.2.2" data-path="git.html"><a href="git.html#create-a-branch-to-work-on-a-new-feature-or-bugfix"><i class="fa fa-check"></i><b>1.2.2</b> Create a branch to work on a new feature or bugfix</a></li>
+<li class="chapter" data-level="1.2.3" data-path="git.html"><a href="git.html#rebase-your-feature-branch-commits-to-the-front-of-your-master-branch"><i class="fa fa-check"></i><b>1.2.3</b> <span>Rebase</span> your feature branch commits to the front of your master branch</a></li>
+<li class="chapter" data-level="1.2.4" data-path="git.html"><a href="git.html#push-changes-to-github-and-create-pull-request"><i class="fa fa-check"></i><b>1.2.4</b> Push changes to GitHub and create pull request</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="2" data-path="pack.html"><a href="pack.html"><i class="fa fa-check"></i><b>2</b> Packages</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="pack.html"><a href="pack.html#install-development-tools"><i class="fa fa-check"></i><b>2.1</b> Install Development Tools</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="pack.html"><a href="pack.html#mac-xcode"><i class="fa fa-check"></i><b>2.1.1</b> Mac: XCode</a></li>
+<li class="chapter" data-level="2.1.2" data-path="pack.html"><a href="pack.html#windows-rtools"><i class="fa fa-check"></i><b>2.1.2</b> Windows: Rtools</a></li>
+<li class="chapter" data-level="2.1.3" data-path="pack.html"><a href="pack.html#linux-r-development-tools-package"><i class="fa fa-check"></i><b>2.1.3</b> Linux: R development tools package</a></li>
+<li class="chapter" data-level="2.1.4" data-path="pack.html"><a href="pack.html#verify-success"><i class="fa fa-check"></i><b>2.1.4</b> Verify Success</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="pack.html"><a href="pack.html#rules-and-best-practices"><i class="fa fa-check"></i><b>2.2</b> Rules and Best Practices:</a></li>
+<li class="chapter" data-level="2.3" data-path="pack.html"><a href="pack.html#building-the-package"><i class="fa fa-check"></i><b>2.3</b> Building the package</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="pack.html"><a href="pack.html#when"><i class="fa fa-check"></i><b>2.3.1</b> When?</a></li>
+<li class="chapter" data-level="2.3.2" data-path="pack.html"><a href="pack.html#clean"><i class="fa fa-check"></i><b>2.3.2</b> Clean</a></li>
+<li class="chapter" data-level="2.3.3" data-path="pack.html"><a href="pack.html#build"><i class="fa fa-check"></i><b>2.3.3</b> Build</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>3</b> Unit Testing</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="test.html"><a href="test.html#test-scripts"><i class="fa fa-check"></i><b>3.1</b> Test Scripts</a></li>
+<li class="chapter" data-level="3.2" data-path="test.html"><a href="test.html#an-example-test"><i class="fa fa-check"></i><b>3.2</b> An Example Test</a></li>
+<li class="chapter" data-level="3.3" data-path="test.html"><a href="test.html#expectations"><i class="fa fa-check"></i><b>3.3</b> Expectations</a></li>
+<li class="chapter" data-level="3.4" data-path="test.html"><a href="test.html#testing-workflow"><i class="fa fa-check"></i><b>3.4</b> Testing Workflow</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="doc.html"><a href="doc.html"><i class="fa fa-check"></i><b>4</b> Documentation</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="doc.html"><a href="doc.html#how-roxygen-works"><i class="fa fa-check"></i><b>4.1</b> How roxygen Works</a></li>
+<li class="chapter" data-level="4.2" data-path="doc.html"><a href="doc.html#r-documentation-rd-format"><i class="fa fa-check"></i><b>4.2</b> R Documentation (Rd) Format</a></li>
+<li class="chapter" data-level="4.3" data-path="doc.html"><a href="doc.html#exports"><i class="fa fa-check"></i><b>4.3</b> Exports</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="putting-it-all-together-the-workflow.html"><a href="putting-it-all-together-the-workflow.html"><i class="fa fa-check"></i><b>5</b> Putting It All Together: The Workflow</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -180,16 +206,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="test" class="section level1">
-<h1 number="2"><span class="header-section-number">2</span> Unit Testing</h1>
+<h1 number="3"><span class="header-section-number">3</span> Unit Testing</h1>
 <p>Likely as not, you have already written scripts that demonstrate that your script runs and produces a desired results. Unit testing, via the <strong>testthat</strong> package <span class="citation">(Wickham <a href="references.html#ref-testthat" role="doc-biblioref">2011</a>)</span>, formalizes this process and automates many of these scripts at once to make running a comprehensive test set easy to do. Read up about <a href="https://r-pkgs.org/tests.html">testing</a> and <a href="https://r-pkgs.org/r-cmd-check.html">automated checking</a></p>
+<div id="test-scripts" class="section level2">
+<h2 number="3.1"><span class="header-section-number">3.1</span> Test Scripts</h2>
+<p>Each time you write a user-facing or non-trivial function, you should write a test script that verifies that the function returns the result you expected in all individual cases. These test files live in <code>tests/testthat/</code>. The file name must start with “test” and it should indicate which function or functionality is being tested.</p>
+</div>
+<div id="an-example-test" class="section level2">
+<h2 number="3.2"><span class="header-section-number">3.2</span> An Example Test</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="test.html#cb6-1"></a><span class="kw">test_that</span>(<span class="st">&quot;multiplication works&quot;</span>, {</span>
+<span id="cb6-2"><a href="test.html#cb6-2"></a>  actual =<span class="st"> </span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="dv">2</span></span>
+<span id="cb6-3"><a href="test.html#cb6-3"></a>  expected =<span class="st"> </span><span class="dv">4</span></span>
+<span id="cb6-4"><a href="test.html#cb6-4"></a>  <span class="kw">expect_equal</span>(actual, expected)</span>
+<span id="cb6-5"><a href="test.html#cb6-5"></a>})</span></code></pre></div>
+</div>
+<div id="expectations" class="section level2">
+<h2 number="3.3"><span class="header-section-number">3.3</span> Expectations</h2>
+<p>Expect functions are those at the end of test each test case that allow you to check the output of your function against what you expect. There are many kinds of these functions, the most common being <code>expect_equal()</code>. If need be, there are more complicated ways to express expectation such as <code>expect_lt()</code> that passes when the returned value is less than the specified value. A comprehensive list can be found <a href="https://testthat.r-lib.org/reference/index.html">here</a>.</p>
+</div>
+<div id="testing-workflow" class="section level2">
+<h2 number="3.4"><span class="header-section-number">3.4</span> Testing Workflow</h2>
+<ol style="list-style-type: decimal">
+<li>Create a new functionality.</li>
+<li>Write a series of tests in a new file to verify your function behaves the way you <em>expect</em> in every scenario, including edge cases, with parameters like <code>0</code>, <code>null</code>, and minimum or maximum possible input values.</li>
+<li>Test the package with <code>devtools::test()</code>.</li>
+<li>Modify your code to fix failing test cases.</li>
+<li>Repeat until all tests pass.</li>
+</ol>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="git.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pack.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="doc.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -221,7 +273,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/r-for-research-scientists/edit/master/02-test.Rmd",
+"link": "https://github.com/rstudio/r-for-research-scientists/edit/master/03-test.Rmd",
 "text": "Edit"
 },
 "history": {

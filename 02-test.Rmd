@@ -1,3 +1,0 @@
-# Unit Testing {#test}
-
-Likely as not, you have already written scripts that demonstrate that your script runs and produces a desired results. Unit testing, via the **testthat** package [@testthat], formalizes this process and automates many of these scripts at once to make running a comprehensive test set easy to do. Read up about [testing](https://r-pkgs.org/tests.html) and [automated checking](https://r-pkgs.org/r-cmd-check.html)
