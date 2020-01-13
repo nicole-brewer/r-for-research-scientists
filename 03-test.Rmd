@@ -1,0 +1,29 @@
+# Unit Testing {#test}
+
+Likely as not, you have already written scripts that demonstrate that your script runs and produces a desired results. Unit testing, via the **testthat** package [@testthat], formalizes this process and automates many of these scripts at once to make running a comprehensive test set easy to do. Read up about [testing](https://r-pkgs.org/tests.html) and [automated checking](https://r-pkgs.org/r-cmd-check.html)
+
+
+## Test Scripts
+
+Each time you write a user-facing or non-trivial function, you should write a test script that verifies that the function returns the result you expected in all individual cases. These test files live in `tests/testthat/`. The file name must start with "test" and it should indicate which function or functionality is being tested. 
+
+## An Example Test
+```{r, eval=FALSE}
+test_that("multiplication works", {
+  actual = 2 * 2
+  expected = 4
+  expect_equal(actual, expected)
+})
+```
+
+## Expectations
+
+Expect functions are those at the end of test each test case that allow you to check the output of your function against what you expect. There are many kinds of these functions, the most common being `expect_equal()`. If need be, there are more complicated ways to express expectation such as `expect_lt()` that passes when the returned value is less than the specified value. A comprehensive list can be found [here](https://testthat.r-lib.org/reference/index.html).
+
+## Testing Workflow
+
+1. Create a new functionality.
+2. Write a series of tests in a new file to verify your function behaves the way you *expect* in every scenario, including edge cases, with parameters like `0`, `null`, and minimum or maximum possible input values. 
+3. Test the package with `devtools::test()`.
+4. Modify your code to fix failing test cases.
+5. Repeat until all tests pass.

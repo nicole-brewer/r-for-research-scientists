@@ -1,0 +1,14 @@
+# Putting It All Together: The Workflow
+
+To contribute to a project, we have to interact with Git, Github, documentation, and our package all in one session.
+
+1. `git pull upstream master`
+2. make one incremental change and verify that your code still runs
+3. Add roxygen comments to your .R files
+5. `devtools::document()` to automatically turn comments into Rd files
+3. `devtools::check()` and fix any errors given
+4. Repeat `devtools::check()` until there aren't any more errors
+3. make a commit with an informative title
+4. `git push origin master`
+
+To play around with the package from the user standpoint, we must load it with `devtools::install()`

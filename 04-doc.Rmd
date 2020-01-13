@@ -1,0 +1,33 @@
+# Documentation {#doc}
+
+## How roxygen Works
+
+When you create documentation, you want it to be available in several forms: an imformative comment block above each function,  something that can be accessed by the `help()` function, something that can be rendered on a website, and perhaps a PDF. roxygen is convenient, because it automatically converts a comment block into all these other formats.
+
+Here is an examle of a function with roxygen *documentation block*: 
+
+```{R}
+#' Add together two numbers.
+#' 
+#' @param x A number.
+#' @param y A number.
+#' @return The sum of \code{x} and \code{y}.
+#' @examples
+#' add(1, 1)
+#' add(10, 1)
+add <- function(x, y) {
+  x + y
+}
+```
+
+You may notice the single quote after the hashtag ( `#'` ); this is to distinguish between a regular comment and an roxygen comment.
+
+## R Documentation (Rd) Format
+
+You may also notice the `\code{}` **formatting command**. There are [many of these](https://cran.r-project.org/doc/manuals/R-exts.html#Marking-text) commands that are in R documentation markup language. They are useful because they help render the text correctly in the variety of formats previously mentioned.
+
+**Tags** such as `@param` above breaks up each block into distince sections. Three of these tags may be implied and excluded; for example the **title** section in the above example is shown as the first sentence in the block, although it could have been explicitely demarkated with a `@title` tag. The second paragraph is always the **description**, and any subsequent unmarked paragraphs go into the **details** section. 
+
+## Exports
+
+Any functions in your package you want your user to have access to need to be exported. This can be done to an object or function by adding `@export` to its roxygen block.
