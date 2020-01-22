@@ -24,7 +24,7 @@
 <meta name="author" content="Nicole Brewer" />
 
 
-<meta name="date" content="2020-01-13" />
+<meta name="date" content="2020-01-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -149,7 +149,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="1.2.1" data-path="git.html"><a href="git.html#merge-upstream-changes-into-your-own-master-branch"><i class="fa fa-check"></i><b>1.2.1</b> Merge upstream changes into your own master branch</a></li>
 <li class="chapter" data-level="1.2.2" data-path="git.html"><a href="git.html#create-a-branch-to-work-on-a-new-feature-or-bugfix"><i class="fa fa-check"></i><b>1.2.2</b> Create a branch to work on a new feature or bugfix</a></li>
-<li class="chapter" data-level="1.2.3" data-path="git.html"><a href="git.html#rebase-your-feature-branch-commits-to-the-front-of-your-master-branch"><i class="fa fa-check"></i><b>1.2.3</b> <span>Rebase</span> your feature branch commits to the front of your master branch</a></li>
+<li class="chapter" data-level="1.2.3" data-path="git.html"><a href="git.html#use-the-repeated-amend-strategy-to-develop-your-feature-branch"><i class="fa fa-check"></i><b>1.2.3</b> Use the Repeated Amend strategy to develop your feature branch</a></li>
 <li class="chapter" data-level="1.2.4" data-path="git.html"><a href="git.html#push-changes-to-github-and-create-pull-request"><i class="fa fa-check"></i><b>1.2.4</b> Push changes to GitHub and create pull request</a></li>
 </ul></li>
 </ul></li>
@@ -180,7 +180,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="doc.html"><a href="doc.html"><i class="fa fa-check"></i><b>4</b> Documentation</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="doc.html"><a href="doc.html#how-roxygen-works"><i class="fa fa-check"></i><b>4.1</b> How roxygen Works</a></li>
-<li class="chapter" data-level="4.2" data-path="doc.html"><a href="doc.html#r-documentation-rd-format"><i class="fa fa-check"></i><b>4.2</b> R Documentation (Rd) Format</a></li>
+<li class="chapter" data-level="4.2" data-path="doc.html"><a href="doc.html#r-documentation-rd-format"><i class="fa fa-check"></i><b>4.2</b> R Documentation (Rd) Format</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="doc.html"><a href="doc.html#generate-roxygen-skeleton"><i class="fa fa-check"></i><b>4.2.1</b> Generate Roxygen Skeleton</a></li>
+</ul></li>
 <li class="chapter" data-level="4.3" data-path="doc.html"><a href="doc.html#exports"><i class="fa fa-check"></i><b>4.3</b> Exports</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="putting-it-all-together-the-workflow.html"><a href="putting-it-all-together-the-workflow.html"><i class="fa fa-check"></i><b>5</b> Putting It All Together: The Workflow</a></li>
@@ -214,22 +217,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="an-example-test" class="section level2">
 <h2 number="3.2"><span class="header-section-number">3.2</span> An Example Test</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="test.html#cb6-1"></a><span class="kw">test_that</span>(<span class="st">&quot;multiplication works&quot;</span>, {</span>
-<span id="cb6-2"><a href="test.html#cb6-2"></a>  actual =<span class="st"> </span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="dv">2</span></span>
-<span id="cb6-3"><a href="test.html#cb6-3"></a>  expected =<span class="st"> </span><span class="dv">4</span></span>
-<span id="cb6-4"><a href="test.html#cb6-4"></a>  <span class="kw">expect_equal</span>(actual, expected)</span>
-<span id="cb6-5"><a href="test.html#cb6-5"></a>})</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="test.html#cb7-1"></a><span class="kw">test_that</span>(<span class="st">&quot;multiplication works&quot;</span>, {</span>
+<span id="cb7-2"><a href="test.html#cb7-2"></a>  actual =<span class="st"> </span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="dv">2</span></span>
+<span id="cb7-3"><a href="test.html#cb7-3"></a>  expected =<span class="st"> </span><span class="dv">4</span></span>
+<span id="cb7-4"><a href="test.html#cb7-4"></a>  <span class="kw">expect_equal</span>(actual, expected)</span>
+<span id="cb7-5"><a href="test.html#cb7-5"></a>})</span></code></pre></div>
 </div>
 <div id="expectations" class="section level2">
 <h2 number="3.3"><span class="header-section-number">3.3</span> Expectations</h2>
-<p>Expect functions are those at the end of test each test case that allow you to check the output of your function against what you expect. There are many kinds of these functions, the most common being <code>expect_equal()</code>. If need be, there are more complicated ways to express expectation such as <code>expect_lt()</code> that passes when the returned value is less than the specified value. A comprehensive list can be found <a href="https://testthat.r-lib.org/reference/index.html">here</a>.</p>
+<p>Expect functions are those at the end of test each test case that allow you to check the output of your function against what you expect. There are many kinds of these functions, the most common being <code>expect_equal()</code>. If need be, there are more complicated ways to express expectation such as <code>expect_lt()</code> that passes when the returned value is less than the specified value, or <code>expect_error()</code> that expects an error to be thrown instead of a return value. A comprehensive list can be found <a href="https://testthat.r-lib.org/reference/index.html">here</a>.</p>
 </div>
 <div id="testing-workflow" class="section level2">
 <h2 number="3.4"><span class="header-section-number">3.4</span> Testing Workflow</h2>
 <ol style="list-style-type: decimal">
 <li>Create a new functionality.</li>
 <li>Write a series of tests in a new file to verify your function behaves the way you <em>expect</em> in every scenario, including edge cases, with parameters like <code>0</code>, <code>null</code>, and minimum or maximum possible input values.</li>
-<li>Test the package with <code>devtools::test()</code>.</li>
+<li>Load the edits you made and test the package with <code>devtools::test()</code>.</li>
 <li>Modify your code to fix failing test cases.</li>
 <li>Repeat until all tests pass.</li>
 </ol>

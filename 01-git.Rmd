@@ -34,6 +34,9 @@ git remote -v
 Inspired by \@Chaser324's [Gist](https://gist.github.com/Chaser324/ce0505fbed06b947d962).
 
 ### Merge upstream changes into your own master branch
+
+This should be nontrivial if you committed and pushed the last time you coded.
+
 ```bash
 # Fetch from upstream remote
 git fetch upstream
@@ -44,6 +47,7 @@ git merge upstream/master
 ```
 
 ### Create a branch to work on a new feature or bugfix
+
 ```bash
 # Checkout the master branch - you want your new branch to come from master
 git checkout master
@@ -54,17 +58,42 @@ git branch newfeature
 # Switch to your new branch
 git checkout newfeature
 ```
+### Use the Repeated Amend strategy to develop your feature branch
 
-### [Rebase](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) your feature branch commits to the front of your master branch
+This strategy comes from Chapter 24 of [Happy Git with R](https://happygitwithr.com/repeated-amend.html). I highly suggest that you read the whole thing yourself.
+
+The idea of a repeated amend is that you can have a version of your code to fall back on (with a `git reset --hard`) that is more recent than your last commit. Imagine, you don't want to make a tiny commit for every trivial change, but at some point you are far through your next commit, and things start breaking. A repeated amend is how we prevent tiny commits, and provide ourselves with a fail safe at every step of your code that still runs.
+
+```bash
+# make a few changes to the code and test to make sure nothing is broken
+
+# commit so we have something to revert back to if need be
+git commit -m "The name of the thing I want to accomplish in the completed commit"
+
+# make a few more changes
+
+# instead of making another giant commit, we amend our last one with the new changes
+git commit --amend # --no-edit if you don't need to change the message
+
+# we continue this process until we want to start a new commit, by not using --amend
+```
+
+#### Incorperate upstream changes
+
+Just make sure you're incorperating upstream changes to origin master. Then you can pull from master to your feature branch. 
+```bash
+git fetch upstream
+git checkout master
+git merge upstream/master
+git checkout newfeature
+git pull --rebase origin master
+```
+This works as long as the upstream changes don't overlap with any of the changes you have made. If this doesn't work for you there are other, more complicated [ways to deal with this](https://happygitwithr.com/pull-tricky.html).
+
+Note: a [rebase](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) rewrites your history so that your new commits are shifted to the top of the master branch, as shown below.
 
 ```{r, echo=FALSE, fig.cap="Rebase of feature branch [@rebase]"}
 knitr::include_graphics("images/rebase.svg")
-```
-
-```bash
-# Rebase your development branch
-git checkout newfeature
-git rebase master
 ```
 
 ### Push changes to GitHub and create pull request

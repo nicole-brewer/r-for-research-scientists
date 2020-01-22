@@ -28,6 +28,12 @@ You may also notice the `\code{}` **formatting command**. There are [many of the
 
 **Tags** such as `@param` above breaks up each block into distince sections. Three of these tags may be implied and excluded; for example the **title** section in the above example is shown as the first sentence in the block, although it could have been explicitely demarkated with a `@title` tag. The second paragraph is always the **description**, and any subsequent unmarked paragraphs go into the **details** section. 
 
+### Generate Roxygen Skeleton
+
+1. Place your cursor on a fuction you haven't yet made documentation for.
+2. In RStudio menu, select "Code" -> "Insert Roxygen Skeleton".
+
 ## Exports
 
 Any functions in your package you want your user to have access to need to be exported. This can be done to an object or function by adding `@export` to its roxygen block.
+
