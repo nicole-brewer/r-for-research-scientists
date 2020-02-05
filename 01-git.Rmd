@@ -58,7 +58,7 @@ git branch newfeature
 # Switch to your new branch
 git checkout newfeature
 ```
-### Use the Repeated Amend strategy to develop your feature branch
+### Use the Repeated Amend strategy to develop your feature branch {#repeatedAmend}
 
 This strategy comes from Chapter 24 of [Happy Git with R](https://happygitwithr.com/repeated-amend.html). I highly suggest that you read the whole thing yourself.
 

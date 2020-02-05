@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1 Git and Github | R for Research Scientists</title>
+  <title>5 Putting It All Together | R for Research Scientists</title>
   <meta name="description" content="A book for researchers who contribute code to R projects, but are not package administrators." />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1 Git and Github | R for Research Scientists" />
+  <meta property="og:title" content="5 Putting It All Together | R for Research Scientists" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="brewer36/r-for-research-scientists" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1 Git and Github | R for Research Scientists" />
+  <meta name="twitter:title" content="5 Putting It All Together | R for Research Scientists" />
   
   <meta name="twitter:description" content="A book for researchers who contribute code to R projects, but are not package administrators." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="pack.html"/>
+<link rel="prev" href="doc.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -221,93 +221,97 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="git" class="section level1">
-<h1 number="1"><span class="header-section-number">1</span> Git and Github</h1>
-<p>The what and why of version control (specific to R!) can be found <a href="https://happygitwithr.com/">here</a></p>
-<div id="git-in-rstudio" class="section level2">
-<h2 number="1.1"><span class="header-section-number">1.1</span> Git in RStudio</h2>
-<p>There is a “git” tab in RStudio, but it can’t perform simple operations required to develop a project from a fork, so you likely want to start using the terminal for all of your git needs. If you are a visual person, there are many flavors of git guis for download( (which can be found <a href="https://git-scm.com/downloads/guis">here</a>) that have graphical history viewers that show color coded history trees.</p>
-<div class="figure"><span id="fig:unnamed-chunk-2"></span>
-<img src="images/gitk.png" alt="Gitk's interface [@gitk]"  />
-<p class="caption">
-Figure 1: Gitk’s interface <span class="citation">(Git <a href="references.html#ref-gitk" role="doc-biblioref">2020</a>)</span>
-</p>
+<div id="putting-it-all-together" class="section level1">
+<h1 number="5"><span class="header-section-number">5</span> Putting It All Together</h1>
+<div id="the-workflow" class="section level2">
+<h2 number="5.1"><span class="header-section-number">5.1</span> The Workflow</h2>
+<div id="before-we-start-coding-lets-make-sure-were-up-to-date." class="section level3">
+<h3 number="5.1.1"><span class="header-section-number">5.1.1</span> Before we start coding, let’s make sure were up to date.</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="putting-it-all-together.html#cb9-1"></a><span class="co"># Fetch from upstream remote</span></span>
+<span id="cb9-2"><a href="putting-it-all-together.html#cb9-2"></a><span class="fu">git</span> fetch upstream</span>
+<span id="cb9-3"><a href="putting-it-all-together.html#cb9-3"></a></span>
+<span id="cb9-4"><a href="putting-it-all-together.html#cb9-4"></a><span class="co"># Checkout your master branch and merge upstream</span></span>
+<span id="cb9-5"><a href="putting-it-all-together.html#cb9-5"></a><span class="fu">git</span> checkout master</span>
+<span id="cb9-6"><a href="putting-it-all-together.html#cb9-6"></a><span class="fu">git</span> merge upstream/master</span></code></pre></div>
 </div>
-<p>Gitk (shown above) and git-gui come with a standard Git install. If you wish to make a commit with a gui, use the command <code>git gui</code> and if you wish to view the history tree, execute <code>gitk --all</code> in your terminal.</p>
-<div id="setting-up-remotes-for-the-first-time" class="section level3">
-<h3 number="1.1.1"><span class="header-section-number">1.1.1</span> Setting Up Remotes for the First Time</h3>
-<p>Create a fork on GitHub. A <strong>fork</strong> is a static copy of someone else’s Github repository. A <strong>remote</strong> repository is the version that is stored on a GitHub server (as opposed to your personal laptop or <em>local</em> machine), and is the version available for viewing on github.com. An <strong>upstream</strong> repository is the shared version of the project that you are contributing to.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="git.html#cb1-1"></a><span class="co"># create a local copy (clone) of your fork</span></span>
-<span id="cb1-2"><a href="git.html#cb1-2"></a><span class="fu">git</span> clone https://github.rcac.purdue.edu/<span class="op">&lt;</span>YOUR_USERNAME<span class="op">&gt;</span>/SuperPower.git</span>
-<span id="cb1-3"><a href="git.html#cb1-3"></a><span class="co"># remote origin is your own personal fork as it lives on GitHub</span></span>
-<span id="cb1-4"><a href="git.html#cb1-4"></a><span class="fu">git</span> remote set-url origin https://github.rcac.purdue.edu/<span class="op">&lt;</span>YOUR_USERNAME<span class="op">&gt;</span>/SuperPower.git</span>
-<span id="cb1-5"><a href="git.html#cb1-5"></a><span class="co"># remote upstream is the parent repository as it lives on GitHub</span></span>
-<span id="cb1-6"><a href="git.html#cb1-6"></a><span class="fu">git</span> remote set-url upstream https://github.rcac.purdue.edu/ScientificSolutions/SuperPower.git</span>
-<span id="cb1-7"><a href="git.html#cb1-7"></a><span class="co"># list remotes</span></span>
-<span id="cb1-8"><a href="git.html#cb1-8"></a><span class="fu">git</span> remote -v</span></code></pre></div>
+<div id="create-a-branch-to-work-on-a-new-feature-or-bugfix-1" class="section level3">
+<h3 number="5.1.2"><span class="header-section-number">5.1.2</span> Create a branch to work on a new feature or bugfix</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="putting-it-all-together.html#cb10-1"></a><span class="co"># Checkout the master branch - you want your new branch to come from master</span></span>
+<span id="cb10-2"><a href="putting-it-all-together.html#cb10-2"></a><span class="fu">git</span> checkout master</span>
+<span id="cb10-3"><a href="putting-it-all-together.html#cb10-3"></a></span>
+<span id="cb10-4"><a href="putting-it-all-together.html#cb10-4"></a><span class="co"># Create a new branch named newfeature (give your branch its own simple informative name)</span></span>
+<span id="cb10-5"><a href="putting-it-all-together.html#cb10-5"></a><span class="fu">git</span> branch newfeature</span>
+<span id="cb10-6"><a href="putting-it-all-together.html#cb10-6"></a></span>
+<span id="cb10-7"><a href="putting-it-all-together.html#cb10-7"></a><span class="co"># Switch to your new branch</span></span>
+<span id="cb10-8"><a href="putting-it-all-together.html#cb10-8"></a><span class="fu">git</span> checkout newfeature</span></code></pre></div>
+</div>
+<div id="load-the-devtools-library" class="section level3">
+<h3 number="5.1.3"><span class="header-section-number">5.1.3</span> Load the <code>devtools</code> library</h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="putting-it-all-together.html#cb11-1"></a><span class="co"># We use devtools a lot, and if we don&#39;t wan&#39;t to use the long form function call</span></span>
+<span id="cb11-2"><a href="putting-it-all-together.html#cb11-2"></a>dev_tools<span class="op">::</span><span class="kw">load_all</span>()</span>
+<span id="cb11-3"><a href="putting-it-all-together.html#cb11-3"></a><span class="co"># we can make it available in our console with </span></span>
+<span id="cb11-4"><a href="putting-it-all-together.html#cb11-4"></a><span class="kw">library</span>(devtools)</span>
+<span id="cb11-5"><a href="putting-it-all-together.html#cb11-5"></a><span class="co"># so next time we only have to type</span></span>
+<span id="cb11-6"><a href="putting-it-all-together.html#cb11-6"></a><span class="kw">load_all</span>()</span></code></pre></div>
+</div>
+<div id="abide-by-the-repeaded-amend-strategy" class="section level3">
+<h3 number="5.1.4"><span class="header-section-number">5.1.4</span> Abide by the <a href="git.html#repeatedAmend">Repeaded Amend</a> strategy</h3>
+<p>We should make commits often. We should make amends even more often, so
+if our code ever breaks in horrible ways, we can easily discard our work since
+the last amend with <code>git reset --hard</code></p>
+<p><em>First:</em> Make a small change to your code.</p>
+<p><em>Next:</em></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="putting-it-all-together.html#cb12-1"></a><span class="co"># When you want to test the changes you&#39;ve made by running code, first execute ...</span></span>
+<span id="cb12-2"><a href="putting-it-all-together.html#cb12-2"></a></span>
+<span id="cb12-3"><a href="putting-it-all-together.html#cb12-3"></a><span class="kw">load_all</span>()</span>
+<span id="cb12-4"><a href="putting-it-all-together.html#cb12-4"></a></span>
+<span id="cb12-5"><a href="putting-it-all-together.html#cb12-5"></a><span class="co"># ... in your console. This function **simulates** that your updated code has been added to your package</span></span>
+<span id="cb12-6"><a href="putting-it-all-together.html#cb12-6"></a><span class="co"># so you can play aroud with it without actually building the changes into all of your package files.</span></span>
+<span id="cb12-7"><a href="putting-it-all-together.html#cb12-7"></a><span class="co"># This means you can load_all (as opposed to build) at any time in development without having to</span></span>
+<span id="cb12-8"><a href="putting-it-all-together.html#cb12-8"></a><span class="co"># rebuild after correcting a mistake</span></span>
+<span id="cb12-9"><a href="putting-it-all-together.html#cb12-9"></a></span>
+<span id="cb12-10"><a href="putting-it-all-together.html#cb12-10"></a><span class="co"># [VERIFY YOUR UPDATED CODE WORKS (by running code or test cases)]</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="putting-it-all-together.html#cb13-1"></a><span class="ex">commit</span> add <span class="op">&lt;</span>files<span class="op">&gt;</span> <span class="op">&lt;</span>you<span class="op">&gt;</span> <span class="op">&lt;</span>just<span class="op">&gt;</span> <span class="op">&lt;</span>updated<span class="op">&gt;</span></span>
+<span id="cb13-2"><a href="putting-it-all-together.html#cb13-2"></a></span>
+<span id="cb13-3"><a href="putting-it-all-together.html#cb13-3"></a><span class="co"># This next bit goes one of two ways</span></span>
+<span id="cb13-4"><a href="putting-it-all-together.html#cb13-4"></a><span class="co"># 1. If you haven&#39;t created a new commit yet...</span></span>
+<span id="cb13-5"><a href="putting-it-all-together.html#cb13-5"></a><span class="ex">commit</span> -m <span class="st">&quot;Describe the feature or bugfix&quot;</span></span>
+<span id="cb13-6"><a href="putting-it-all-together.html#cb13-6"></a></span>
+<span id="cb13-7"><a href="putting-it-all-together.html#cb13-7"></a><span class="co"># 2. If you want to add more changes on top of a commit you&#39;ve already started...</span></span>
+<span id="cb13-8"><a href="putting-it-all-together.html#cb13-8"></a><span class="ex">commit</span> --amend</span></code></pre></div>
+<p><em>Finally</em>: Repeat until you’ve correctly implemented a new functionality.</p>
+</div>
+<div id="integrate-changes-with-the-package" class="section level3">
+<h3 number="5.1.5"><span class="header-section-number">5.1.5</span> Integrate Changes with the Package</h3>
+<p>The <code>check()</code> function does three things for us: it updates our <code>roxygen</code> documentation, it runs our <code>testthat</code> test files,
+and it checks for a bunch of things that make sure we’ve implemented our code well.</p>
+<ol style="list-style-type: decimal">
+<li>Run the <code>devtools::check(cleanup=TRUE)</code> function</li>
+<li>Fix the first error or warning</li>
+<li>Repeat steps (1) and (2) until all errors and warnings are resolved.</li>
+<li><code>git commit --amend</code> one last time. <em>Make sure</em> to include all those files produced or updated by the check function,
+even if you didn’t write it yourself.</li>
+</ol>
+</div>
+<div id="incorperate-upstream-changes-1" class="section level3">
+<h3 number="5.1.6"><span class="header-section-number">5.1.6</span> Incorperate Upstream Changes</h3>
+<p>Before you create a pull request, you’ll want to make sure you’ve incorperated upstream changes into your feature branch.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="putting-it-all-together.html#cb14-1"></a><span class="co"># merge upstream changes into master</span></span>
+<span id="cb14-2"><a href="putting-it-all-together.html#cb14-2"></a><span class="fu">git</span> fetch upstream</span>
+<span id="cb14-3"><a href="putting-it-all-together.html#cb14-3"></a><span class="fu">git</span> checkout master</span>
+<span id="cb14-4"><a href="putting-it-all-together.html#cb14-4"></a><span class="fu">git</span> merge upstream/master</span>
+<span id="cb14-5"><a href="putting-it-all-together.html#cb14-5"></a><span class="co"># pull those changes from master into your feature</span></span>
+<span id="cb14-6"><a href="putting-it-all-together.html#cb14-6"></a><span class="fu">git</span> checkout newfeature</span>
+<span id="cb14-7"><a href="putting-it-all-together.html#cb14-7"></a><span class="fu">git</span> pull --rebase origin master</span></code></pre></div>
+</div>
+<div id="congratulations" class="section level3">
+<h3 number="5.1.7"><span class="header-section-number">5.1.7</span> Congratulations!</h3>
+<p>You have successfully create a feature, and you may submit a pull request :blush:</p>
 </div>
 </div>
-<div id="git-workflow-from-a-fork" class="section level2">
-<h2 number="1.2"><span class="header-section-number">1.2</span> Git Workflow from a Fork</h2>
-<p>Inspired by @Chaser324’s <a href="https://gist.github.com/Chaser324/ce0505fbed06b947d962">Gist</a>.</p>
-<div id="merge-upstream-changes-into-your-own-master-branch" class="section level3">
-<h3 number="1.2.1"><span class="header-section-number">1.2.1</span> Merge upstream changes into your own master branch</h3>
-<p>This should be nontrivial if you committed and pushed the last time you coded.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="git.html#cb2-1"></a><span class="co"># Fetch from upstream remote</span></span>
-<span id="cb2-2"><a href="git.html#cb2-2"></a><span class="fu">git</span> fetch upstream</span>
-<span id="cb2-3"><a href="git.html#cb2-3"></a></span>
-<span id="cb2-4"><a href="git.html#cb2-4"></a><span class="co"># Checkout your master branch and merge upstream</span></span>
-<span id="cb2-5"><a href="git.html#cb2-5"></a><span class="fu">git</span> checkout master</span>
-<span id="cb2-6"><a href="git.html#cb2-6"></a><span class="fu">git</span> merge upstream/master</span></code></pre></div>
-</div>
-<div id="create-a-branch-to-work-on-a-new-feature-or-bugfix" class="section level3">
-<h3 number="1.2.2"><span class="header-section-number">1.2.2</span> Create a branch to work on a new feature or bugfix</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="git.html#cb3-1"></a><span class="co"># Checkout the master branch - you want your new branch to come from master</span></span>
-<span id="cb3-2"><a href="git.html#cb3-2"></a><span class="fu">git</span> checkout master</span>
-<span id="cb3-3"><a href="git.html#cb3-3"></a></span>
-<span id="cb3-4"><a href="git.html#cb3-4"></a><span class="co"># Create a new branch named newfeature (give your branch its own simple informative name)</span></span>
-<span id="cb3-5"><a href="git.html#cb3-5"></a><span class="fu">git</span> branch newfeature</span>
-<span id="cb3-6"><a href="git.html#cb3-6"></a></span>
-<span id="cb3-7"><a href="git.html#cb3-7"></a><span class="co"># Switch to your new branch</span></span>
-<span id="cb3-8"><a href="git.html#cb3-8"></a><span class="fu">git</span> checkout newfeature</span></code></pre></div>
-</div>
-<div id="repeatedAmend" class="section level3">
-<h3 number="1.2.3"><span class="header-section-number">1.2.3</span> Use the Repeated Amend strategy to develop your feature branch</h3>
-<p>This strategy comes from Chapter 24 of <a href="https://happygitwithr.com/repeated-amend.html">Happy Git with R</a>. I highly suggest that you read the whole thing yourself.</p>
-<p>The idea of a repeated amend is that you can have a version of your code to fall back on (with a <code>git reset --hard</code>) that is more recent than your last commit. Imagine, you don’t want to make a tiny commit for every trivial change, but at some point you are far through your next commit, and things start breaking. A repeated amend is how we prevent tiny commits, and provide ourselves with a fail safe at every step of your code that still runs.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="git.html#cb4-1"></a><span class="co"># make a few changes to the code and test to make sure nothing is broken</span></span>
-<span id="cb4-2"><a href="git.html#cb4-2"></a></span>
-<span id="cb4-3"><a href="git.html#cb4-3"></a><span class="co"># commit so we have something to revert back to if need be</span></span>
-<span id="cb4-4"><a href="git.html#cb4-4"></a><span class="fu">git</span> commit -m <span class="st">&quot;The name of the thing I want to accomplish in the completed commit&quot;</span></span>
-<span id="cb4-5"><a href="git.html#cb4-5"></a></span>
-<span id="cb4-6"><a href="git.html#cb4-6"></a><span class="co"># make a few more changes</span></span>
-<span id="cb4-7"><a href="git.html#cb4-7"></a></span>
-<span id="cb4-8"><a href="git.html#cb4-8"></a><span class="co"># instead of making another giant commit, we amend our last one with the new changes</span></span>
-<span id="cb4-9"><a href="git.html#cb4-9"></a><span class="fu">git</span> commit --amend <span class="co"># --no-edit if you don&#39;t need to change the message</span></span>
-<span id="cb4-10"><a href="git.html#cb4-10"></a></span>
-<span id="cb4-11"><a href="git.html#cb4-11"></a><span class="co"># we continue this process until we want to start a new commit, by not using --amend</span></span></code></pre></div>
-<div id="incorperate-upstream-changes" class="section level4">
-<h4 number="1.2.3.1"><span class="header-section-number">1.2.3.1</span> Incorperate upstream changes</h4>
-<p>Just make sure you’re incorperating upstream changes to origin master. Then you can pull from master to your feature branch.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="git.html#cb5-1"></a><span class="fu">git</span> fetch upstream</span>
-<span id="cb5-2"><a href="git.html#cb5-2"></a><span class="fu">git</span> checkout master</span>
-<span id="cb5-3"><a href="git.html#cb5-3"></a><span class="fu">git</span> merge upstream/master</span>
-<span id="cb5-4"><a href="git.html#cb5-4"></a><span class="fu">git</span> checkout newfeature</span>
-<span id="cb5-5"><a href="git.html#cb5-5"></a><span class="fu">git</span> pull --rebase origin master</span></code></pre></div>
-<p>This works as long as the upstream changes don’t overlap with any of the changes you have made. If this doesn’t work for you there are other, more complicated <a href="https://happygitwithr.com/pull-tricky.html">ways to deal with this</a>.</p>
-<p>Note: a <a href="https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase">rebase</a> rewrites your history so that your new commits are shifted to the top of the master branch, as shown below.</p>
-<div class="figure"><span id="fig:unnamed-chunk-3"></span>
-<img src="images/rebase.svg" alt="Rebase of feature branch [@rebase]"  />
-<p class="caption">
-Figure 2: Rebase of feature branch <span class="citation">(Tutorials and Atlassian Git Tutorial <a href="references.html#ref-rebase" role="doc-biblioref">2020</a>)</span>
-</p>
-</div>
-</div>
-</div>
-<div id="push-changes-to-github-and-create-pull-request" class="section level3">
-<h3 number="1.2.4"><span class="header-section-number">1.2.4</span> Push changes to GitHub and create pull request</h3>
+<div id="contending-with-upstream-changes" class="section level2">
+<h2 number="5.2"><span class="header-section-number">5.2</span> Contending with Upstream Changes</h2>
 
-</div>
 </div>
 </div>
             </section>
@@ -315,8 +319,8 @@ Figure 2: Rebase of feature branch <span class="citation">(Tutorials and Atlassi
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="pack.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="doc.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -347,7 +351,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/r-for-research-scientists/edit/master/01-git.Rmd",
+"link": "https://github.com/rstudio/r-for-research-scientists/edit/master/05-workflow.Rmd",
 "text": "Edit"
 },
 "history": {

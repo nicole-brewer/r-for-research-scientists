@@ -1,14 +1,108 @@
-# Putting It All Together: The Workflow
+# Putting It All Together
 
-To contribute to a project, we have to interact with Git, Github, documentation, and our package all in one session.
+## The Workflow
 
-1. `git pull upstream master`
-2. make one incremental change and verify that your code still runs
-3. Add roxygen comments to your .R files
-5. `devtools::document()` to automatically turn comments into Rd files
-3. `devtools::check()` and fix any errors given
-4. Repeat `devtools::check()` until there aren't any more errors
-3. make a commit with an informative title
-4. `git push origin master`
+### Before we start coding, let's make sure were up to date.
+```bash
+# Fetch from upstream remote
+git fetch upstream
 
-To play around with the package from the user standpoint, we must load it with `devtools::install()`
+# Checkout your master branch and merge upstream
+git checkout master
+git merge upstream/master
+```
+
+### Create a branch to work on a new feature or bugfix
+
+```bash
+# Checkout the master branch - you want your new branch to come from master
+git checkout master
+
+# Create a new branch named newfeature (give your branch its own simple informative name)
+git branch newfeature
+
+# Switch to your new branch
+git checkout newfeature
+```
+
+### Load the `devtools` library
+
+```R 
+# We use devtools a lot, and if we don't wan't to use the long form function call
+dev_tools::load_all()
+# we can make it available in our console with 
+library(devtools)
+# so next time we only have to type
+load_all()
+```
+
+### Abide by the [Repeaded Amend](#repeatedAmend) strategy
+
+We should make commits often. We should make amends even more often, so
+if our code ever breaks in horrible ways, we can easily discard our work since
+the last amend with `git reset --hard`
+
+*First:* Make a small change to your code.
+
+*Next:*
+
+```R
+# When you want to test the changes you've made by running code, first execute ...
+
+load_all()
+
+# ... in your console. This function **simulates** that your updated code has been added to your package
+# so you can play aroud with it without actually building the changes into all of your package files.
+# This means you can load_all (as opposed to build) at any time in development without having to
+# rebuild after correcting a mistake
+
+# [VERIFY YOUR UPDATED CODE WORKS (by running code or test cases)]
+```
+
+```bash
+commit add <files> <you> <just> <updated>
+
+# This next bit goes one of two ways
+# 1. If you haven't created a new commit yet...
+commit -m "Describe the feature or bugfix"
+
+# 2. If you want to add more changes on top of a commit you've already started...
+commit --amend
+```
+
+*Finally*: Repeat until you've correctly implemented a new functionality.
+
+### Integrate Changes with the Package
+
+The `check()` function does three things for us: it updates our `roxygen` documentation, it runs our `testthat` test files,
+and it checks for a bunch of things that make sure we've implemented our code well. 
+
+1. Run the `devtools::check(cleanup=TRUE)` function
+2. Fix the first error or warning
+3. Repeat steps (1) and (2) until all errors and warnings are resolved.
+4. `git commit --amend` one last time. *Make sure* to include all those files produced or updated by the check function,
+even if you didn't write it yourself.
+
+### Incorperate Upstream Changes
+
+Before you create a pull request, you'll want to make sure you've incorperated upstream changes into your feature branch.
+
+```bash
+# merge upstream changes into master
+git fetch upstream
+git checkout master
+git merge upstream/master
+# pull those changes from master into your feature
+git checkout newfeature
+git pull --rebase origin master
+```
+
+### Congratulations!
+
+You have successfully create a feature, and you may submit a pull request :blush: 
+
+## Contending with Upstream Changes
+
+
+
+

@@ -18,7 +18,7 @@ Download and run the recommended Rtools<version-number>.exe file from https://cr
 
 Install the R development tools package corresponding to your system.
 
-### Verify Success
+### Verify Success in RStudio Console
 ```r
 library(devtools)
 has_devel()
