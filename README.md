@@ -1,15 +1,15 @@
 # R for Research Scientists
 
-There are already many great tutorials out there for building packages in R, but they are generally too comprehensive, and cater to project administrators. This book is intended for researchers who contriubute code to an R project, and leaves out details irrelevant to this audience.
-
-
+There are already many great tutorials out there for building packages in R. This book is intended to serve as an overview of R and it's related technologies, a list of resources, and a set of workflows that pertain to researchers, scientists, engineers, and statisticians. 
 
 ## Topics Covered:
+add links**
+1. R Language and Environment
+2. Git
+3. R Packages
+4. Unit Testing
+5. Documentation
+6. Development Workflow
+7. Publication
 
-1. Using Git in RStudio
-2. R Packages
-3. Writing Unit Tests
-4. Writing Documentation
-5. A Comprehensive Workflow
-
-This tutorial is built with [bookdown](https://bookdown.org/yihui/bookdown/).
+This tutorial is built with [bookdown](https://bookdown.org/yihui/bookdown/), which is an publication type discussed in [Chapter 7](linkme)

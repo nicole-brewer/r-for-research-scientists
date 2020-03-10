@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Packages | R for Research Scientists</title>
+  <title>Chapter: 3 Packages | Publications in RStudio</title>
   <meta name="description" content="A book for researchers who contribute code to R projects, but are not package administrators." />
-  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Packages | R for Research Scientists" />
+  <meta property="og:title" content="Chapter: 3 Packages | Publications in RStudio" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="brewer36/r-for-research-scientists" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Packages | R for Research Scientists" />
+  <meta name="twitter:title" content="Chapter: 3 Packages | Publications in RStudio" />
   
   <meta name="twitter:description" content="A book for researchers who contribute code to R projects, but are not package administrators." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Nicole Brewer" />
 
 
-<meta name="date" content="2020-02-05" />
+<meta name="date" content="2020-03-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -139,66 +139,93 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-will-you-learn"><i class="fa fa-check"></i>What will you learn?</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-this-worth-your-precious-time"><i class="fa fa-check"></i>Why this worth your precious time?</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>1</b> Git and Github</a>
+<li class="chapter" data-level="1" data-path="r-language-and-environment.html"><a href="r-language-and-environment.html"><i class="fa fa-check"></i><b>1</b> R Language and Environment</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="git.html"><a href="git.html#git-in-rstudio"><i class="fa fa-check"></i><b>1.1</b> Git in RStudio</a>
+<li class="chapter" data-level="1.1" data-path="r-language-and-environment.html"><a href="r-language-and-environment.html#strengths"><i class="fa fa-check"></i><b>1.1</b> Strengths</a>
 <ul>
-<li class="chapter" data-level="1.1.1" data-path="git.html"><a href="git.html#setting-up-remotes-for-the-first-time"><i class="fa fa-check"></i><b>1.1.1</b> Setting Up Remotes for the First Time</a></li>
+<li class="chapter" data-level="1.1.1" data-path="r-language-and-environment.html"><a href="r-language-and-environment.html#extensibility"><i class="fa fa-check"></i><b>1.1.1</b> Extensibility</a></li>
+<li class="chapter" data-level="1.1.2" data-path="r-language-and-environment.html"><a href="r-language-and-environment.html#visualization"><i class="fa fa-check"></i><b>1.1.2</b> Visualization</a></li>
+<li class="chapter" data-level="1.1.3" data-path="r-language-and-environment.html"><a href="r-language-and-environment.html#documentation-and-publication"><i class="fa fa-check"></i><b>1.1.3</b> Documentation and Publication</a></li>
+<li class="chapter" data-level="1.1.4" data-path="r-language-and-environment.html"><a href="r-language-and-environment.html#tabular-data"><i class="fa fa-check"></i><b>1.1.4</b> Tabular Data</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="git.html"><a href="git.html#git-workflow-from-a-fork"><i class="fa fa-check"></i><b>1.2</b> Git Workflow from a Fork</a>
+<li class="chapter" data-level="1.2" data-path="r-language-and-environment.html"><a href="r-language-and-environment.html#making-up-for-weaknesses-with-python"><i class="fa fa-check"></i><b>1.2</b> Making Up for Weaknesses with Python</a>
 <ul>
-<li class="chapter" data-level="1.2.1" data-path="git.html"><a href="git.html#merge-upstream-changes-into-your-own-master-branch"><i class="fa fa-check"></i><b>1.2.1</b> Merge upstream changes into your own master branch</a></li>
-<li class="chapter" data-level="1.2.2" data-path="git.html"><a href="git.html#create-a-branch-to-work-on-a-new-feature-or-bugfix"><i class="fa fa-check"></i><b>1.2.2</b> Create a branch to work on a new feature or bugfix</a></li>
-<li class="chapter" data-level="1.2.3" data-path="git.html"><a href="git.html#repeatedAmend"><i class="fa fa-check"></i><b>1.2.3</b> Use the Repeated Amend strategy to develop your feature branch</a></li>
-<li class="chapter" data-level="1.2.4" data-path="git.html"><a href="git.html#push-changes-to-github-and-create-pull-request"><i class="fa fa-check"></i><b>1.2.4</b> Push changes to GitHub and create pull request</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="pack.html"><a href="pack.html"><i class="fa fa-check"></i><b>2</b> Packages</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="pack.html"><a href="pack.html#install-development-tools"><i class="fa fa-check"></i><b>2.1</b> Install Development Tools</a>
-<ul>
-<li class="chapter" data-level="2.1.1" data-path="pack.html"><a href="pack.html#mac-xcode"><i class="fa fa-check"></i><b>2.1.1</b> Mac: XCode</a></li>
-<li class="chapter" data-level="2.1.2" data-path="pack.html"><a href="pack.html#windows-rtools"><i class="fa fa-check"></i><b>2.1.2</b> Windows: Rtools</a></li>
-<li class="chapter" data-level="2.1.3" data-path="pack.html"><a href="pack.html#linux-r-development-tools-package"><i class="fa fa-check"></i><b>2.1.3</b> Linux: R development tools package</a></li>
-<li class="chapter" data-level="2.1.4" data-path="pack.html"><a href="pack.html#verify-success-in-rstudio-console"><i class="fa fa-check"></i><b>2.1.4</b> Verify Success in RStudio Console</a></li>
-</ul></li>
-<li class="chapter" data-level="2.2" data-path="pack.html"><a href="pack.html#rules-and-best-practices"><i class="fa fa-check"></i><b>2.2</b> Rules and Best Practices:</a></li>
-<li class="chapter" data-level="2.3" data-path="pack.html"><a href="pack.html#building-the-package"><i class="fa fa-check"></i><b>2.3</b> Building the package</a>
-<ul>
-<li class="chapter" data-level="2.3.1" data-path="pack.html"><a href="pack.html#when"><i class="fa fa-check"></i><b>2.3.1</b> When?</a></li>
-<li class="chapter" data-level="2.3.2" data-path="pack.html"><a href="pack.html#clean"><i class="fa fa-check"></i><b>2.3.2</b> Clean</a></li>
-<li class="chapter" data-level="2.3.3" data-path="pack.html"><a href="pack.html#build"><i class="fa fa-check"></i><b>2.3.3</b> Build</a></li>
+<li class="chapter" data-level="1.2.1" data-path="r-language-and-environment.html"><a href="r-language-and-environment.html#calling-python-from-r"><i class="fa fa-check"></i><b>1.2.1</b> Calling Python from R</a></li>
+<li class="chapter" data-level="1.2.2" data-path="r-language-and-environment.html"><a href="r-language-and-environment.html#calling-r-from-python"><i class="fa fa-check"></i><b>1.2.2</b> Calling R from Python</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>3</b> Unit Testing</a>
+<li class="chapter" data-level="2" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>2</b> Git and Github</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="test.html"><a href="test.html#test-scripts"><i class="fa fa-check"></i><b>3.1</b> Test Scripts</a></li>
-<li class="chapter" data-level="3.2" data-path="test.html"><a href="test.html#an-example-test"><i class="fa fa-check"></i><b>3.2</b> An Example Test</a></li>
-<li class="chapter" data-level="3.3" data-path="test.html"><a href="test.html#expectations"><i class="fa fa-check"></i><b>3.3</b> Expectations</a></li>
-<li class="chapter" data-level="3.4" data-path="test.html"><a href="test.html#testing-workflow"><i class="fa fa-check"></i><b>3.4</b> Testing Workflow</a></li>
+<li class="chapter" data-level="2.1" data-path="git.html"><a href="git.html#git-in-rstudio"><i class="fa fa-check"></i><b>2.1</b> Git in RStudio</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="git.html"><a href="git.html#setting-up-remotes-for-the-first-time"><i class="fa fa-check"></i><b>2.1.1</b> Setting Up Remotes for the First Time</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="doc.html"><a href="doc.html"><i class="fa fa-check"></i><b>4</b> Documentation</a>
+<li class="chapter" data-level="2.2" data-path="git.html"><a href="git.html#git-workflow-from-a-fork"><i class="fa fa-check"></i><b>2.2</b> Git Workflow from a Fork</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="doc.html"><a href="doc.html#how-roxygen-works"><i class="fa fa-check"></i><b>4.1</b> How roxygen Works</a></li>
-<li class="chapter" data-level="4.2" data-path="doc.html"><a href="doc.html#r-documentation-rd-format"><i class="fa fa-check"></i><b>4.2</b> R Documentation (Rd) Format</a>
-<ul>
-<li class="chapter" data-level="4.2.1" data-path="doc.html"><a href="doc.html#generate-roxygen-skeleton"><i class="fa fa-check"></i><b>4.2.1</b> Generate Roxygen Skeleton</a></li>
+<li class="chapter" data-level="2.2.1" data-path="git.html"><a href="git.html#merge-upstream-changes-into-your-own-master-branch"><i class="fa fa-check"></i><b>2.2.1</b> Merge upstream changes into your own master branch</a></li>
+<li class="chapter" data-level="2.2.2" data-path="git.html"><a href="git.html#create-a-branch-to-work-on-a-new-feature-or-bugfix"><i class="fa fa-check"></i><b>2.2.2</b> Create a branch to work on a new feature or bugfix</a></li>
+<li class="chapter" data-level="2.2.3" data-path="git.html"><a href="git.html#repeatedAmend"><i class="fa fa-check"></i><b>2.2.3</b> Use the Repeated Amend strategy to develop your feature branch</a></li>
+<li class="chapter" data-level="2.2.4" data-path="git.html"><a href="git.html#push-changes-to-github-and-create-pull-request"><i class="fa fa-check"></i><b>2.2.4</b> Push changes to GitHub and create pull request</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="doc.html"><a href="doc.html#exports"><i class="fa fa-check"></i><b>4.3</b> Exports</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html"><i class="fa fa-check"></i><b>5</b> Putting It All Together</a>
+<li class="chapter" data-level="3" data-path="pack.html"><a href="pack.html"><i class="fa fa-check"></i><b>3</b> Packages</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html#the-workflow"><i class="fa fa-check"></i><b>5.1</b> The Workflow</a>
+<li class="chapter" data-level="3.1" data-path="pack.html"><a href="pack.html#install-development-tools"><i class="fa fa-check"></i><b>3.1</b> Install Development Tools</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html#before-we-start-coding-lets-make-sure-were-up-to-date."><i class="fa fa-check"></i><b>5.1.1</b> Before we start coding, let’s make sure were up to date.</a></li>
-<li class="chapter" data-level="5.1.2" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html#create-a-branch-to-work-on-a-new-feature-or-bugfix-1"><i class="fa fa-check"></i><b>5.1.2</b> Create a branch to work on a new feature or bugfix</a></li>
-<li class="chapter" data-level="5.1.3" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html#load-the-devtools-library"><i class="fa fa-check"></i><b>5.1.3</b> Load the <code>devtools</code> library</a></li>
-<li class="chapter" data-level="5.1.4" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html#abide-by-the-repeaded-amend-strategy"><i class="fa fa-check"></i><b>5.1.4</b> Abide by the <span>Repeaded Amend</span> strategy</a></li>
-<li class="chapter" data-level="5.1.5" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html#integrate-changes-with-the-package"><i class="fa fa-check"></i><b>5.1.5</b> Integrate Changes with the Package</a></li>
-<li class="chapter" data-level="5.1.6" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html#incorperate-upstream-changes-1"><i class="fa fa-check"></i><b>5.1.6</b> Incorperate Upstream Changes</a></li>
-<li class="chapter" data-level="5.1.7" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html#congratulations"><i class="fa fa-check"></i><b>5.1.7</b> Congratulations!</a></li>
+<li class="chapter" data-level="3.1.1" data-path="pack.html"><a href="pack.html#mac-xcode"><i class="fa fa-check"></i><b>3.1.1</b> Mac: XCode</a></li>
+<li class="chapter" data-level="3.1.2" data-path="pack.html"><a href="pack.html#windows-rtools"><i class="fa fa-check"></i><b>3.1.2</b> Windows: Rtools</a></li>
+<li class="chapter" data-level="3.1.3" data-path="pack.html"><a href="pack.html#linux-r-development-tools-package"><i class="fa fa-check"></i><b>3.1.3</b> Linux: R development tools package</a></li>
+<li class="chapter" data-level="3.1.4" data-path="pack.html"><a href="pack.html#verify-success-in-rstudio-console"><i class="fa fa-check"></i><b>3.1.4</b> Verify Success in RStudio Console</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html#contending-with-upstream-changes"><i class="fa fa-check"></i><b>5.2</b> Contending with Upstream Changes</a></li>
+<li class="chapter" data-level="3.2" data-path="pack.html"><a href="pack.html#rules-and-best-practices"><i class="fa fa-check"></i><b>3.2</b> Rules and Best Practices:</a></li>
+<li class="chapter" data-level="3.3" data-path="pack.html"><a href="pack.html#building-the-package"><i class="fa fa-check"></i><b>3.3</b> Building the package</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="pack.html"><a href="pack.html#when"><i class="fa fa-check"></i><b>3.3.1</b> When?</a></li>
+<li class="chapter" data-level="3.3.2" data-path="pack.html"><a href="pack.html#clean"><i class="fa fa-check"></i><b>3.3.2</b> Clean</a></li>
+<li class="chapter" data-level="3.3.3" data-path="pack.html"><a href="pack.html#build"><i class="fa fa-check"></i><b>3.3.3</b> Build</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>4</b> Unit Testing</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="test.html"><a href="test.html#test-scripts"><i class="fa fa-check"></i><b>4.1</b> Test Scripts</a></li>
+<li class="chapter" data-level="4.2" data-path="test.html"><a href="test.html#an-example-test"><i class="fa fa-check"></i><b>4.2</b> An Example Test</a></li>
+<li class="chapter" data-level="4.3" data-path="test.html"><a href="test.html#expectations"><i class="fa fa-check"></i><b>4.3</b> Expectations</a></li>
+<li class="chapter" data-level="4.4" data-path="test.html"><a href="test.html#testing-workflow"><i class="fa fa-check"></i><b>4.4</b> Testing Workflow</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="doc.html"><a href="doc.html"><i class="fa fa-check"></i><b>5</b> Documentation</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="doc.html"><a href="doc.html#how-roxygen-works"><i class="fa fa-check"></i><b>5.1</b> How roxygen Works</a></li>
+<li class="chapter" data-level="5.2" data-path="doc.html"><a href="doc.html#r-documentation-rd-format"><i class="fa fa-check"></i><b>5.2</b> R Documentation (Rd) Format</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="doc.html"><a href="doc.html#generate-roxygen-skeleton"><i class="fa fa-check"></i><b>5.2.1</b> Generate Roxygen Skeleton</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="doc.html"><a href="doc.html#exports"><i class="fa fa-check"></i><b>5.3</b> Exports</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html"><i class="fa fa-check"></i><b>6</b> Putting It All Together</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html#the-workflow"><i class="fa fa-check"></i><b>6.1</b> The Workflow</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html#before-we-start-coding-lets-make-sure-were-up-to-date."><i class="fa fa-check"></i><b>6.1.1</b> Before we start coding, let’s make sure were up to date.</a></li>
+<li class="chapter" data-level="6.1.2" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html#create-a-branch-to-work-on-a-new-feature-or-bugfix-1"><i class="fa fa-check"></i><b>6.1.2</b> Create a branch to work on a new feature or bugfix</a></li>
+<li class="chapter" data-level="6.1.3" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html#load-the-devtools-library"><i class="fa fa-check"></i><b>6.1.3</b> Load the <code>devtools</code> library</a></li>
+<li class="chapter" data-level="6.1.4" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html#abide-by-the-repeaded-amend-strategy"><i class="fa fa-check"></i><b>6.1.4</b> Abide by the <span>Repeaded Amend</span> strategy</a></li>
+<li class="chapter" data-level="6.1.5" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html#integrate-changes-with-the-package"><i class="fa fa-check"></i><b>6.1.5</b> Integrate Changes with the Package</a></li>
+<li class="chapter" data-level="6.1.6" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html#incorperate-upstream-changes-1"><i class="fa fa-check"></i><b>6.1.6</b> Incorperate Upstream Changes</a></li>
+<li class="chapter" data-level="6.1.7" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html#congratulations"><i class="fa fa-check"></i><b>6.1.7</b> Congratulations!</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html#contending-with-upstream-changes"><i class="fa fa-check"></i><b>6.2</b> Contending with Upstream Changes</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="publications.html"><a href="publications.html"><i class="fa fa-check"></i><b>7</b> Publications</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="publications.html"><a href="publications.html#r-markdown-and-knitr"><i class="fa fa-check"></i><b>7.1</b> R Markdown and knitr</a></li>
+<li class="chapter" data-level="7.2" data-path="publications.html"><a href="publications.html#vingettes"><i class="fa fa-check"></i><b>7.2</b> Vingettes</a></li>
+<li class="chapter" data-level="7.3" data-path="publications.html"><a href="publications.html#bookdown"><i class="fa fa-check"></i><b>7.3</b> Bookdown</a></li>
+<li class="chapter" data-level="7.4" data-path="publications.html"><a href="publications.html#citation-managment"><i class="fa fa-check"></i><b>7.4</b> Citation Managment</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="publications.html"><a href="publications.html#zotero"><i class="fa fa-check"></i><b>7.4.1</b> Zotero</a></li>
+<li class="chapter" data-level="7.4.2" data-path="publications.html"><a href="publications.html#better-bibtex"><i class="fa fa-check"></i><b>7.4.2</b> Better BibTeX</a></li>
+<li class="chapter" data-level="7.4.3" data-path="publications.html"><a href="publications.html#citr"><i class="fa fa-check"></i><b>7.4.3</b> citr</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -213,7 +240,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R for Research Scientists</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Publications in RStudio</a>
           </h1>
         </div>
 
@@ -222,52 +249,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="pack" class="section level1">
-<h1 number="2"><span class="header-section-number">2</span> Packages</h1>
+<h1><span class="header-section-number">Chapter: 3</span> Packages</h1>
 <p>R packages are the vehicle for distributing working code to other users and their machines. Building a package turns a developer’s human readable code into binary that can be transfered to another user’s computer, and then installed so that package becomes available to the user.</p>
 <div id="install-development-tools" class="section level2">
-<h2 number="2.1"><span class="header-section-number">2.1</span> Install Development Tools</h2>
+<h2><span class="header-section-number">3.1</span> Install Development Tools</h2>
 <p>Buiding an R package requires extra development software that does not come with R or RStudio.</p>
 <div id="mac-xcode" class="section level3">
-<h3 number="2.1.1"><span class="header-section-number">2.1.1</span> Mac: XCode</h3>
+<h3><span class="header-section-number">3.1.1</span> Mac: XCode</h3>
 <p>In your terminal, execute <code>xcode-select --install</code>, and if you are prompted to install command line developer tools, select “Install” and “Agree”.</p>
 </div>
 <div id="windows-rtools" class="section level3">
-<h3 number="2.1.2"><span class="header-section-number">2.1.2</span> Windows: Rtools</h3>
+<h3><span class="header-section-number">3.1.2</span> Windows: Rtools</h3>
 <p>Download and run the recommended Rtools<version-number>.exe file from <a href="https://cran.r-project.org/bin/windows/Rtools/" class="uri">https://cran.r-project.org/bin/windows/Rtools/</a> with the default selections.</p>
 </div>
 <div id="linux-r-development-tools-package" class="section level3">
-<h3 number="2.1.3"><span class="header-section-number">2.1.3</span> Linux: R development tools package</h3>
+<h3><span class="header-section-number">3.1.3</span> Linux: R development tools package</h3>
 <p>Install the R development tools package corresponding to your system.</p>
 </div>
 <div id="verify-success-in-rstudio-console" class="section level3">
-<h3 number="2.1.4"><span class="header-section-number">2.1.4</span> Verify Success in RStudio Console</h3>
+<h3><span class="header-section-number">3.1.4</span> Verify Success in RStudio Console</h3>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="pack.html#cb6-1"></a><span class="kw">library</span>(devtools)</span>
 <span id="cb6-2"><a href="pack.html#cb6-2"></a><span class="kw">has_devel</span>()</span></code></pre></div>
 </div>
 </div>
 <div id="rules-and-best-practices" class="section level2">
-<h2 number="2.2"><span class="header-section-number">2.2</span> Rules and Best Practices:</h2>
+<h2><span class="header-section-number">3.2</span> Rules and Best Practices:</h2>
 <ul>
 <li>All external packages you use inside your package should be listed under the <code>Imports:</code> field in the <code>DESCRIPTION</code> file. This is what makes them available to to your code.</li>
 <li>Use explicit <code>package::function</code> notation when calling a function from another package</li>
 <li>If you are using a particular function a lot, you may add <code>@importFrom package function</code> to the roxygen block to avoid using the above explicit notation</li>
-<li>If you are writing a function to be used by a user of the package, you have to export it. You can do this by placing <code>@export</code> in the roxygen block which is discussed in <a href="doc.html#doc"><strong>??</strong></a></li>
+<li>If you are writing a function to be used by a user of the package, you have to export it. You can do this by placing <code>@export</code> in the roxygen block which is discussed in <a href="doc.html#doc">5</a></li>
 </ul>
 </div>
 <div id="building-the-package" class="section level2">
-<h2 number="2.3"><span class="header-section-number">2.3</span> Building the package</h2>
+<h2><span class="header-section-number">3.3</span> Building the package</h2>
 <div id="when" class="section level3">
-<h3 number="2.3.1"><span class="header-section-number">2.3.1</span> When?</h3>
+<h3><span class="header-section-number">3.3.1</span> When?</h3>
 <p>You should <em>always</em> clean and build the package (and resolve any errors or warnings) before making a commit.</p>
 </div>
 <div id="clean" class="section level3">
-<h3 number="2.3.2"><span class="header-section-number">2.3.2</span> Clean</h3>
+<h3><span class="header-section-number">3.3.2</span> Clean</h3>
 <p>In the RStudio Toolbar, select “Build” &gt;&gt; “Clean”. This removes unneccesssary files that were created from a previous build.</p>
 </div>
 <div id="build" class="section level3">
-<h3 number="2.3.3"><span class="header-section-number">2.3.3</span> Build</h3>
+<h3><span class="header-section-number">3.3.3</span> Build</h3>
 <p><code>R CMD check</code> in the terminal, <code>devtools::check()</code> in the console, and Ctrl/Cmd + Shift + E in RStudio all deploy a function that checks your package for common problems and makes sure a package includes everything in needs to play well with others upon distribution.</p>
-<p>Errors and warnings produced by the <code>check()</code> funciton should be resolved before every commit. This workflow comes from the book <strong>R packages</strong> <span class="citation">(Wickham and Bryan <a href="references.html#ref-r-packages" role="doc-biblioref">2019</a>)</span>:</p>
+<p>Errors and warnings produced by the <code>check()</code> funciton should be resolved before every commit. This workflow comes from the book <strong>R packages</strong> <span class="citation">(Wickham and Bryan <a href="#ref-r-packages" role="doc-biblioref">2019</a>)</span>:</p>
 <ol style="list-style-type: decimal">
 <li>Run the <code>devtools::check()</code> function</li>
 <li>Fix the first error or warning</li>
@@ -276,6 +303,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 
 </div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-r-packages">
+<p>Wickham, Hadley, and Jennifer Bryan. 2019. <em>R Packages</em>. <a href="https://r-pkgs.org/">https://r-pkgs.org/</a>.</p>
 </div>
 </div>
             </section>
@@ -315,7 +348,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/r-for-research-scientists/edit/master/02-pack.Rmd",
+"link": "https://github.com/rstudio/r-for-research-scientists/edit/master/03-pack.Rmd",
 "text": "Edit"
 },
 "history": {

@@ -1,0 +1,51 @@
+---
+title: "R Language and Environment"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# R Language and Environment
+
+According to it's website [@R-base], R is a language and environment for statistical computing and graphics.
+While R can technically be used to create complicated software, by this definition we know that this is not the language's primary purpose. On the other hand, R and RStudio support all stages of development in a single application window with four panes, including visualization, building, documentation, unit testing, file navigation, add-ons, environment variables and more. R is highly specialized which naturally engenders compelling strengths and weaknesses. 
+
+## Strengths
+
+
+### Extensibility
+
+A **package** is an R project that can be shared and installed by other users. Installing packages extremely easy in R; you can even install a package straight from a GitHub repository link. Because of this, it's highly extesible, meaning that it's easy to incorperate other packages into your own and extend the functionality of to original package. R has been around over 20 years, and because packages are so easy to create and share, there is typically already a package that has the statistical functionality you may need. Thus one good reason to choose R is that your community already has a well established set of packages that suite most needs.
+
+### Visualization
+
+R comes with data analysis graphics baked-in and come with with diverse display options including on-screen and hardcopy.
+
+### Documentation and Publication
+
+R is fully integrated with well-developed publishing tools that are discussed in [Chapter 7].
+
+### Tabular Data
+
+Tidyverse is a well-developed and expanding set of packages designed for data science or in any place you may want to use sets of rectangular data. 
+> In brief, when your data is tidy, each column is a variable, and each row is an observation. Tidy data is important because the consistent structure lets you focus your struggle on questions about the data, not fighting to get the data into the right form for different functions. [@grolemundb]
+
+## Making Up for Weaknesses with Python
+
+R simply isn't a language designed for the development of complex software or applications. While R does technically support object oriented programming, there are three kinds of objects: **S3**, **R6**, and **S4**. Choosing the right type and knowing the best way to implement it is difficult, and has a high buy-in.
+
+Python on the other hand is known for it's simplistic syntax and having set of "pythonic" implementation standards that keep code easy to read. A lack of stack trace error messages make bugging multiple files and functioins in R is confusing and arduous. Complicated data types make implementing input validation difficult.
+
+Given all this, the age old question "should I use R or Python?" is poorly posed question. Rather, we should write each piece of the project in whatever language suits our needs best, and then ask "how do I best integrate my R and Python code"?
+
+### Calling Python from R
+If you are an R developer that uses Python for some of your work or a member of data science team that uses both languages, you can use the `reticulate` package to interface with Python[@zotero-31]. 
+
+### Calling R from Python
+If you are simply performing statistical or data analysis it may be best to stick with R, but if the project is a fully-fleged application, you may want to scaffold the project with Python. `rpy2` establishes an interface between both languages so a developer may benefit from the libraries of one language while working in the other [@zotero-29].
+
+
+
+

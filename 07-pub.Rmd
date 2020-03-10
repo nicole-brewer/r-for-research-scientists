@@ -1,0 +1,29 @@
+---
+title: "Publications in RStudio"
+output: html_document
+---
+
+# Publications
+
+## R Markdown and knitr
+
+Markdown is a simple, human-readable, language designed to be easily converted into other more practical markup languages such as HTML. A markup language is one where the syntactic elements have implied meaning in terms of how they are organized and displayed. In HTML, these elements are defined with tags, where in Markdown, they are defined by visually friendly syntax.
+
+[R Markdown](https://rmarkdown.rstudio.com/docs/) is an extension of this widely used markup language, but the `rmarkdown` package helps users create dynamic analysis documents that combine code, rendered output (such as figures), and prose [@R-rmarkdown]. Specifically, `knitr` is the engine that makes it possible to combine runnable text and code in a readable document. R Markdown documents can easily be converted to manifold other formats such as HTML, PowerPoint presentations, Word documents, well formatted PDFs, interactive notebooks (compare to Jupyter) and a few others specific to R which we discuss below.
+
+The **Definitive Guide to R Markdown**[@rmarkdown2018] can be found [here](https://bookdown.org/yihui/rmarkdown/).
+
+## Vingettes
+Vingettes, or so-called "long-form documentation", is the best way to provide end-to-end examples of your package code to a user. More information about writing vingettes can be found in [Chapter 9](https://r-pkgs.org/vignettes.html#vignette-workflow-2) of R Packages [@r-packages].
+
+
+## Bookdown
+
+## Citation Managment
+
+### Zotero
+
+### Better BibTeX
+
+### citr
+

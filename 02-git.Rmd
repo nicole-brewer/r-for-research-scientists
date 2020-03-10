@@ -23,7 +23,7 @@ git clone https://github.rcac.purdue.edu/<YOUR_USERNAME>/SuperPower.git
 # remote origin is your own personal fork as it lives on GitHub
 git remote set-url origin https://github.rcac.purdue.edu/<YOUR_USERNAME>/SuperPower.git
 # remote upstream is the parent repository as it lives on GitHub
-git remote set-url upstream https://github.rcac.purdue.edu/ScientificSolutions/SuperPower.git
+git remote add upstream https://github.rcac.purdue.edu/ScientificSolutions/SuperPower.git
 # list remotes
 git remote -v
 

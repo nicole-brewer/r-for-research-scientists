@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Publications in RStudio</title>
+  <title>Chapter: 7 Publications | Publications in RStudio</title>
   <meta name="description" content="A book for researchers who contribute code to R projects, but are not package administrators." />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Publications in RStudio" />
+  <meta property="og:title" content="Chapter: 7 Publications | Publications in RStudio" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="brewer36/r-for-research-scientists" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Publications in RStudio" />
+  <meta name="twitter:title" content="Chapter: 7 Publications | Publications in RStudio" />
   
   <meta name="twitter:description" content="A book for researchers who contribute code to R projects, but are not package administrators." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="r-language-and-environment.html"/>
+<link rel="prev" href="putting-it-all-together.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -248,29 +248,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Publications in RStudio</h1>
-<p class="author"><em>Nicole Brewer</em></p>
-<p class="date"><em>2020-03-10</em></p>
+<div id="publications" class="section level1">
+<h1><span class="header-section-number">Chapter: 7</span> Publications</h1>
+<div id="r-markdown-and-knitr" class="section level2">
+<h2><span class="header-section-number">7.1</span> R Markdown and knitr</h2>
+<p>Markdown is a simple, human-readable, language designed to be easily converted into other more practical markup languages such as HTML. A markup language is one where the syntactic elements have implied meaning in terms of how they are organized and displayed. In HTML, these elements are defined with tags, where in Markdown, they are defined by visually friendly syntax.</p>
+<p><a href="https://rmarkdown.rstudio.com/docs/">R Markdown</a> is an extension of this widely used markup language, but the <code>rmarkdown</code> package helps users create dynamic analysis documents that combine code, rendered output (such as figures), and prose <span class="citation">(Allaire et al. <a href="#ref-R-rmarkdown" role="doc-biblioref">2020</a>)</span>. Specifically, <code>knitr</code> is the engine that makes it possible to combine runnable text and code in a readable document. R Markdown documents can easily be converted to manifold other formats such as HTML, PowerPoint presentations, Word documents, well formatted PDFs, interactive notebooks (compare to Jupyter) and a few others specific to R which we discuss below.</p>
+<p>The <strong>Definitive Guide to R Markdown</strong><span class="citation">(Xie, Allaire, and Grolemund <a href="#ref-rmarkdown2018" role="doc-biblioref">2018</a>)</span> can be found <a href="https://bookdown.org/yihui/rmarkdown/">here</a>.</p>
 </div>
-<div id="preamble" class="section level1">
-<h1>Preamble</h1>
-<div id="who-is-this-book-for" class="section level3">
-<h3>Who is this book for?</h3>
-<p>There are already many great tutorials out there for building packages in R, but they are generally too comprehensive, and cater to project administrators. This book is intended for researchers who contriubute code to an R project, and leaves out details irrelevant to this audience. If you <em>are</em> the administrator for you project or you just want to know more about what’s going on behind the hood, each section begins by explaining the <strong>why</strong> of standard practices, and includes resources that explain how to implement them.</p>
+<div id="vingettes" class="section level2">
+<h2><span class="header-section-number">7.2</span> Vingettes</h2>
+<p>Vingettes, or so-called “long-form documentation”, is the best way to provide end-to-end examples of your package code to a user. More information about writing vingettes can be found in <a href="https://r-pkgs.org/vignettes.html#vignette-workflow-2">Chapter 9</a> of R Packages <span class="citation">(Wickham and Bryan <a href="#ref-r-packages" role="doc-biblioref">2019</a>)</span>.</p>
 </div>
-<div id="what-you-wont-learn." class="section level3">
-<h3>What you won’t learn.</h3>
-<p>How to program in R.</p>
+<div id="bookdown" class="section level2">
+<h2><span class="header-section-number">7.3</span> Bookdown</h2>
 </div>
-<div id="what-will-you-learn" class="section level3">
-<h3>What will you learn?</h3>
-<p>How to contribute to a well structured project.</p>
+<div id="citation-managment" class="section level2">
+<h2><span class="header-section-number">7.4</span> Citation Managment</h2>
+<div id="zotero" class="section level3">
+<h3><span class="header-section-number">7.4.1</span> Zotero</h3>
 </div>
-<div id="why-this-worth-your-precious-time" class="section level3">
-<h3>Why this worth your precious time?</h3>
-<p>Reading this book will save you from more headaches and time-wasters than you can imagine, especially as your project grows in size and complexity.</p>
+<div id="better-bibtex" class="section level3">
+<h3><span class="header-section-number">7.4.2</span> Better BibTeX</h3>
+</div>
+<div id="citr" class="section level3">
+<h3><span class="header-section-number">7.4.3</span> citr</h3>
 
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-R-rmarkdown">
+<p>Allaire, JJ, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin Ushey, Aron Atkins, Hadley Wickham, Joe Cheng, Winston Chang, and Richard Iannone. 2020. <em>Rmarkdown: Dynamic Documents for R</em>. <a href="https://CRAN.R-project.org/package=rmarkdown">https://CRAN.R-project.org/package=rmarkdown</a>.</p>
+</div>
+<div id="ref-r-packages">
+<p>Wickham, Hadley, and Jennifer Bryan. 2019. <em>R Packages</em>. <a href="https://r-pkgs.org/">https://r-pkgs.org/</a>.</p>
+</div>
+<div id="ref-rmarkdown2018">
+<p>Xie, Yihui, J. J. Allaire, and Garrett Grolemund. 2018. <em>R Markdown: The Definitive Guide</em>. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/rmarkdown">https://bookdown.org/yihui/rmarkdown</a>.</p>
 </div>
 </div>
             </section>
@@ -278,8 +294,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-
-<a href="r-language-and-environment.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="putting-it-all-together.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -310,7 +326,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/r-for-research-scientists/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/r-for-research-scientists/edit/master/07-pub.Rmd",
 "text": "Edit"
 },
 "history": {

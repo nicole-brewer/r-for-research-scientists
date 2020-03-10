@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Publications in RStudio</title>
+  <title>Chapter: 1 R Language and Environment | Publications in RStudio</title>
   <meta name="description" content="A book for researchers who contribute code to R projects, but are not package administrators." />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Publications in RStudio" />
+  <meta property="og:title" content="Chapter: 1 R Language and Environment | Publications in RStudio" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="brewer36/r-for-research-scientists" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Publications in RStudio" />
+  <meta name="twitter:title" content="Chapter: 1 R Language and Environment | Publications in RStudio" />
   
   <meta name="twitter:description" content="A book for researchers who contribute code to R projects, but are not package administrators." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="r-language-and-environment.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="git.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -248,29 +248,50 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Publications in RStudio</h1>
-<p class="author"><em>Nicole Brewer</em></p>
-<p class="date"><em>2020-03-10</em></p>
+<div id="r-language-and-environment" class="section level1">
+<h1><span class="header-section-number">Chapter: 1</span> R Language and Environment</h1>
+<p>According to it’s website <span class="citation">(R Core Team <a href="#ref-R-base" role="doc-biblioref">2019</a>)</span>, R is a language and environment for statistical computing and graphics.
+While R can technically be used to create complicated software, by this definition we know that this is not the language’s primary purpose. On the other hand, R and RStudio support all stages of development in a single application window with four panes, including visualization, building, documentation, unit testing, file navigation, add-ons, environment variables and more. R is highly specialized which naturally engenders compelling strengths and weaknesses.</p>
+<div id="strengths" class="section level2">
+<h2><span class="header-section-number">1.1</span> Strengths</h2>
+<div id="extensibility" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Extensibility</h3>
+<p>A <strong>package</strong> is an R project that can be shared and installed by other users. Installing packages extremely easy in R; you can even install a package straight from a GitHub repository link. Because of this, it’s highly extesible, meaning that it’s easy to incorperate other packages into your own and extend the functionality of to original package. R has been around over 20 years, and because packages are so easy to create and share, there is typically already a package that has the statistical functionality you may need. Thus one good reason to choose R is that your community already has a well established set of packages that suite most needs.</p>
 </div>
-<div id="preamble" class="section level1">
-<h1>Preamble</h1>
-<div id="who-is-this-book-for" class="section level3">
-<h3>Who is this book for?</h3>
-<p>There are already many great tutorials out there for building packages in R, but they are generally too comprehensive, and cater to project administrators. This book is intended for researchers who contriubute code to an R project, and leaves out details irrelevant to this audience. If you <em>are</em> the administrator for you project or you just want to know more about what’s going on behind the hood, each section begins by explaining the <strong>why</strong> of standard practices, and includes resources that explain how to implement them.</p>
+<div id="visualization" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Visualization</h3>
+<p>R comes with data analysis graphics baked-in and come with with diverse display options including on-screen and hardcopy.</p>
 </div>
-<div id="what-you-wont-learn." class="section level3">
-<h3>What you won’t learn.</h3>
-<p>How to program in R.</p>
+<div id="documentation-and-publication" class="section level3">
+<h3><span class="header-section-number">1.1.3</span> Documentation and Publication</h3>
+<p>R is fully integrated with well-developed publishing tools that are discussed in [Chapter 7].</p>
 </div>
-<div id="what-will-you-learn" class="section level3">
-<h3>What will you learn?</h3>
-<p>How to contribute to a well structured project.</p>
+<div id="tabular-data" class="section level3">
+<h3><span class="header-section-number">1.1.4</span> Tabular Data</h3>
+<p>Tidyverse is a well-developed and expanding set of packages designed for data science or in any place you may want to use sets of rectangular data.
+&gt; In brief, when your data is tidy, each column is a variable, and each row is an observation. Tidy data is important because the consistent structure lets you focus your struggle on questions about the data, not fighting to get the data into the right form for different functions. <span class="citation">(<span class="citeproc-not-found" data-reference-id="grolemundb"><strong>???</strong></span>)</span></p>
 </div>
-<div id="why-this-worth-your-precious-time" class="section level3">
-<h3>Why this worth your precious time?</h3>
-<p>Reading this book will save you from more headaches and time-wasters than you can imagine, especially as your project grows in size and complexity.</p>
+</div>
+<div id="making-up-for-weaknesses-with-python" class="section level2">
+<h2><span class="header-section-number">1.2</span> Making Up for Weaknesses with Python</h2>
+<p>R simply isn’t a language designed for the development of complex software or applications. While R does technically support object oriented programming, there are three kinds of objects: <strong>S3</strong>, <strong>R6</strong>, and <strong>S4</strong>. Choosing the right type and knowing the best way to implement it is difficult, and has a high buy-in.</p>
+<p>Python on the other hand is known for it’s simplistic syntax and having set of “pythonic” implementation standards that keep code easy to read. A lack of stack trace error messages make bugging multiple files and functioins in R is confusing and arduous. Complicated data types make implementing input validation difficult.</p>
+<p>Given all this, the age old question “should I use R or Python?” is poorly posed question. Rather, we should write each piece of the project in whatever language suits our needs best, and then ask “how do I best integrate my R and Python code”?</p>
+<div id="calling-python-from-r" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Calling Python from R</h3>
+<p>If you are an R developer that uses Python for some of your work or a member of data science team that uses both languages, you can use the <code>reticulate</code> package to interface with Python<span class="citation">(<span class="citeproc-not-found" data-reference-id="zotero-31"><strong>???</strong></span>)</span>.</p>
+</div>
+<div id="calling-r-from-python" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Calling R from Python</h3>
+<p>If you are simply performing statistical or data analysis it may be best to stick with R, but if the project is a fully-fleged application, you may want to scaffold the project with Python. <code>rpy2</code> establishes an interface between both languages so a developer may benefit from the libraries of one language while working in the other <span class="citation">(<span class="citeproc-not-found" data-reference-id="zotero-29"><strong>???</strong></span>)</span>.</p>
 
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-R-base">
+<p>R Core Team. 2019. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.</p>
 </div>
 </div>
             </section>
@@ -278,8 +299,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-
-<a href="r-language-and-environment.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="git.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -310,7 +331,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/r-for-research-scientists/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/r-for-research-scientists/edit/master/01-r.Rmd",
 "text": "Edit"
 },
 "history": {
